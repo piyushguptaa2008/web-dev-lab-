@@ -1,0 +1,80 @@
+
+:root {
+    --bg-color: #f8f7f4;
+    --text-color: #222222;
+    --accent-color: #263d32;
+    --card-color: #ffffff;
+    --muted-color: #666666;
+
+    --font-family: Arial, sans-serif;
+    --font-small: 14px;
+    --font-normal: 16px;
+    --font-heading: 28px;
+    --font-large: 42px;
+
+    --spacing: 24px;
+    --radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: var(--font-normal);
+    line-height: 1.7;
+}
+
+header {
+    background-color: var(--card-color);
+    padding: var(--spacing);
+    text-align: center;
+}
+
+nav a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: var(--spacing);
+}
+
+section {
+    background-color: var(--card-color);
+    padding: var(--spacing);
+    margin-bottom: var(--spacing);
+    border-radius: var(--radius);
+}
+
+h1 {
+    font-size: var(--font-large);
+    color: var(--accent-color);
+}
+
+h2 {
+    font-size: var(--font-heading);
+    color: var(--accent-color);
+}
+
+p {
+    color: var(--muted-color);
+}
+
+a {
+    color: var(--accent-color);
+}
+
+footer {
+    text-align: center;
+    padding: var(--spacing);
+    font-size: var(--font-small);
+}
