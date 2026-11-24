@@ -1,0 +1,362 @@
+
+:root {
+    --background: #f5f4ee;
+    --green: #263d32;
+    --sage: #788477;
+    --white: #ffffff;
+    --text: #333b35;
+    --border: #dedfd5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Navigation - Flexbox */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(245, 244, 238, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--sage);
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 24px;
+}
+
+/* Hero Section */
+
+.hero {
+    padding: 80px 0 50px;
+}
+
+.eyebrow {
+    color: var(--sage);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1, h2, h3 {
+    color: var(--green);
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(44px, 8vw, 85px);
+    font-weight: normal;
+    letter-spacing: -3px;
+    line-height: 1.1;
+    margin: 20px 0 10px;
+}
+
+h1 span {
+    color: #91a68e;
+}
+
+.hero h2 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: normal;
+    color: var(--sage);
+    margin: 0;
+}
+
+.hero p {
+    max-width: 500px;
+    font-size: 17px;
+    margin: 25px 0;
+}
+
+/* Buttons - Flexbox */
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 17px;
+    border-radius: 7px;
+    font-size: 13px;
+    transition: 0.25s ease;
+}
+
+.primary {
+    background: var(--green);
+    color: white;
+    border: 1px solid var(--green);
+}
+
+.primary:hover {
+    background: #42604c;
+    transform: translateY(-2px);
+}
+
+.secondary {
+    border: 1px solid #c5cec2;
+    color: var(--green);
+}
+
+.secondary:hover {
+    background: #e4ebe1;
+    transform: translateY(-2px);
+}
+
+/* Statistics - Flexbox */
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 25px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats strong {
+    font-family: Georgia, serif;
+    color: var(--green);
+    font-size: 38px;
+    font-weight: normal;
+}
+
+.stats span {
+    color: var(--sage);
+    font-size: 13px;
+}
+
+/* Sections */
+
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+    margin: 10px 0 20px;
+}
+
+section p {
+    color: #626a61;
+}
+
+/* Skills - Flexbox */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.skills span {
+    background: #e5ebe1;
+    border: 1px solid #d3ddcf;
+    color: var(--green);
+    border-radius: 30px;
+    padding: 7px 20px;
+    font-size: 13px;
+}
+
+/* Practical Cards - CSS Grid */
+
+.module {
+    margin-top: 35px;
+    margin-bottom: 45px;
+}
+
+.module-title {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    font-weight: normal;
+    margin: 8px 0 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #a8b8a4;
+    box-shadow: 0 10px 25px rgba(38, 61, 50, 0.07);
+}
+
+.number {
+    color: var(--sage);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 15px 0 5px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.card .buttons {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #eeeeee;
+}
+
+/* Footer - Flexbox */
+
+footer {
+    background: var(--green);
+    color: white;
+    padding: 35px 24px;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer h3 {
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 35px;
+    margin: 0;
+}
+
+footer p {
+    color: #b8c7b9;
+    font-size: 13px;
+}
+
+footer a {
+    font-size: 14px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 600px) {
+
+    html {
+        scroll-padding-top: 160px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main {
+        padding: 18px;
+    }
+
+    .hero {
+        padding: 45px 0;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
