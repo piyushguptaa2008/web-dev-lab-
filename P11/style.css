@@ -1,0 +1,130 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background-color: #f8f5ed;
+    color: #222222;
+    font-family: Georgia, serif;
+    line-height: 1.8;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    border-top: 4px solid #222222;
+    border-bottom: 4px double #222222;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin: 5px;
+}
+
+/* Three-column CSS Grid */
+
+.newspaper-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* Article Styling */
+
+article {
+    padding: 20px;
+    border-right: 1px solid #aaaaaa;
+}
+
+article:last-child {
+    border-right: none;
+}
+
+.category {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #666666;
+}
+
+article h2 {
+    font-size: 28px;
+    line-height: 1.3;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 15px;
+}
+
+article p {
+    text-align: justify;
+    font-size: 16px;
+}
+
+/* Footer */
+
+footer {
+    border-top: 4px double #222222;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: #263d32;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Tablet Layout */
+
+@media (max-width: 900px) {
+    .newspaper-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    article {
+        border-right: none;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+}
+
+/* Mobile Layout */
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .newspaper-grid {
+        grid-template-columns: 1fr;
+    }
+
+    article {
+        border-bottom: 1px solid #aaaaaa;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
